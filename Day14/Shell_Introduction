@@ -1,1 +1,130 @@
-s
+Why Scripting?
+
+Automation goals: speed and accuracy
+
+1. Speed
+2. Accuracy, no human errors
+3. Consistency
+4. Scalability, Can work for infinite number of servers
+5. Documentation. What happened including history
+6. Reusability.
+
+we cann't find back what we did 1 year back in server but we do it by writing scripts
+
+Where to store scripts?
+
+1. Security
+2. Can't share with others
+3. Version control
+
+Repositories/Version Control system
+
+Centralised vs Decentralised/Distrubuted
+=========================================
+Centralised capital
+
+1. single point of failure
+2. Pollution
+3. Over crowd
+4. social unrest
+5. Resource shortage
+
+Mumbai -> Movies and financial, transportation
+Chennai -> Manufacturing
+Bangalore -> IT
+Kolkata -> Manufacturing
+
+SVN -> sub version control
+
+Central Library
+===============
+1. What if library is closed on holidays?
+2. What if library building collapsed?
+3. Crowd and their facilities
+
+LMS
+local libraries
+1. they can rent books to us
+
+Git is a concept
+
+GitHub
+Bitbucket
+Gitlab
+ 
+Git clone <repository-url> code will be download into our laptop
+
+normal folder vs git repository-url
+git repo will have .git as hidden directory
+
+branching -> create another duplicate copy, do the changes here and take the approval from colleagues and team member, test them as well. if everything is fine then merge with branching
+
+IDE tool -> Integrated development environment
+
+Ecllipse
+Intellij
+VS codesublime editor
+
+vscode -> workspace -> staging area -> local repo -> central repo
+
+what is staging area?
+it is a temporary area. we can stage the required files for commit...still we have chance to take back into workspace
+
+What is local commit?
+commit into local repository nothing but laptop. commit time will be logged, who committed will be logged, why they commited also will logged
+
+push to central/remote repo?
+
+push to central repo...others can just run git pull(pull the changes from local to central repo)
+
+git clone vs git pull
+=====================
+clone -> first time downloading the code
+pull -> just pull the changes 
+
+staging area -> git add <filename>
+local commit -> git commit -m "first commit, hello world"
+push to central repo -> git push origin main
+
+
+1. signup to github
+2. install vs code
+3. open floder in vscode where you store all repository
+-  create repo
+4. clone the repo
+5. do something
+6. add to staging area
+7. commit to local repo
+8. push to central repo
+
+#!/bin/bash -> shebang
+
+it should be the first line in shell script, it is the interpret to check the syntax of script and execute them
+
+k shell, c shell, z shell, etc.
+
+bash shell
+
+sh == bash
+
+file extension -> .sh
+
+git add . -> all changes will be staged.
+
+git add . ; git commit -m "message"; git push origin main
+
+don't do or edit anything in server
+
+let x=0, y=1 -> variables
+derive the formula
+final substitute
+
+variable is a container that holds something/value
+
+Dry -> don't repeat yourself
+Reusability
+flexibility -> prevents accidental edits
+readability
+
+VAR_NAME=VALUE
+
