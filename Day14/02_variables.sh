@@ -1,7 +1,7 @@
 #!/bin/bash
 
-person1=anil
-person2=rohith
+person1=$1
+person2=$2
 
 echo "$person1:: welcome to world $person2"
 echo "$person2:: thank you $person1 finally we meet"
