@@ -2,11 +2,11 @@
 
 #date=$(date)
 
-START_DATE=$(date+%s)
+START_DATE=$(date +%s)
 
 sleep 10
 
-END_DATE=$(date+%s)
+END_DATE=$(date +%s)
 
 TOTAL_DATE=$(($END_DATE-$START_DATE))
 
