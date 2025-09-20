@@ -6,7 +6,7 @@ NAME=DevOps
 
 SUM=$(($NUMBER1+$NUMBER2+$NAME))
 
-echo "sum is: ${sum}"
+echo "sum is: ${SUM}"
 
 #size =3, max index=2
 LEADERS=("PAVAN" "ROHITH" "KALYAN")
