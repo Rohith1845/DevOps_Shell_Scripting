@@ -17,10 +17,10 @@ else
 fi
 }
 
-dnf install MySQL -y
+dnf install mysql -y
 validate $? "mysql"
 
-dnf install Nginx -y
+dnf install nginx -y
 validate $? "Nginx"
 
 dnf install Python3 -y
