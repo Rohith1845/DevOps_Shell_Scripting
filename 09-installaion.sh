@@ -7,29 +7,21 @@ if [ $USERID -ne 0 ]; then
     exit 1 #Failure other than Zero
 fi
 
-dnf install mysql -y
 
-if [ $? -ne 0 ]; then
-    echo "Error: in installing mysql package"
+validate(){
+if [ $1 -ne 0 ]; then
+    echo "Error: in installing $2 package"
     exit 1
 else
-    echo "Installing mysql package success"
+    echo "Installing $2 package success"
 fi
+}
 
-dnf install nginx -y
+dnf install MySQL -y
+validate $? "mysql"
 
-if [ $? -ne 0 ]; then
-    echo  "Error: in installing nginx package"
-    exit 1
-else
-    echo "Installing nginx successfull"
-fi
+dnf install Nginx -y
+validate $? "Nginx"
 
-dnf install mongo-mongosh -y
-
-if [ $? -ne 0 ]; then
-    echo  "Error: in installing  package"
-    exit 1
-else
-    echo "Installing nginx successfull"
-fi
+dnf install Python3 -y
+validate $? "Python3"
