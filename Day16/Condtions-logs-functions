@@ -1,0 +1,137 @@
+Varaibles
+=========
+1. Declare and assign values inside the script
+2. pass from outside as args
+3. read command
+4. ENV variables
+5. special variables
+
+datatypes
+=========
+fruits=("Apple" "Banana")
+
+"$VAR_NAME
+"${VAR_NAME}"
+
+index starts from 0
+
+conditions
+==========
+
+umbrella sunglasses
+
+alogrithm or thinking is important. no code at this stage just plan english
+
+if/else, when
+
+if it is raining
+    take umbrella
+else 
+    take sunglasses
+	
+if(experssion){
+    these statements if experssion is true
+}
+else{
+     these statement is flase
+}
+
+! is negative
+
+if(!experssion){ # false*false =true
+   these statemnets is true
+   }
+   else{
+       these statements if experssion is false
+	   }
+	   
+if [! condition]; then
+   statement
+
+fi
+
+-lt ->Lessthan
+-gt ->Greaterthan
+-eq ->Equals to
+-ne ->Not equals to
+
+15/2
+take the number
+divide the number and get reminder
+if it equal to 0 then it is even
+otherwise it is odd
+
+Exit status
+===========
+dnf install mysql -y
+
+$? ->Pervious command exit status
+
+0 -> Success
+1-27 -> Failure
+
+install mysql
+check if the user has root access or not
+if root access then Proceed
+otherwise stop and tell them to run with root acess
+
+dnf install mysql -y
+
+check exist status, if it is success
+otherwise show the user it is failed
+
+echo $? ->checking exit status
+
+root user id is 0 by default
+
+if id -u is 0 then proceed
+otherwise stop
+
+if there is error in script, proceed or stop?
+
+mysql, nginx, mongodb-mongosh
+
+scripting/programming
+=====================
+1. keep less lines
+2. readability
+3. Dry, try to reuse the code
+
+functions
+==========
+take some inputs and gives some output
+
+1. call it
+2. provide inputs if required
+
+func_name(){
+
+}
+
+Validate(){}
+
+colour change
+
+Red - "\e[31m"
+Green- "\e[32m"
+yellow- "\e[33m"
+Blue- "\e[34m"
+pruple- "\e[35m"
+white- "\e[36m"
+
+Success - Green
+Failure - Red
+Skip - Yellow
+
+Logs
+=====
+/var/log/DevOps_Shell_Scripting-logs/11-colors.log
+
+Redirections
+============
+1 -> Success
+2 -> Failure
+& -> success/failure
+
+
+ 
