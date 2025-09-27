@@ -1,0 +1,89 @@
+Variables
+Data types
+Conditions
+functions
+Exit status
+Redirections
+Logs
+Colors
+Loops
+
+Clora are for human, logs are for troubleshooting
+
+3 xerox -> no auto xerox
+300 xerox -> auto xerox
+
+loops/iteration
+1. no perfomance improvement
+2. efforts
+ 
+3. less code duplication
+4. easy to maintain
+5. dynamic workloads
+
+for(int i=0;i<100;i++){
+	print i;
+}
+
+Error Handling
+==============
+1. Can we move on with the error
+
+Expected error should be handled
+unexpected error should not be handled
+
+AMI, SG, Key, instance type, storage
+
+Authentivate before
+aws create instance key="" sg-id="" instance-type="t3.micro" --storage="20GB"
+
+aws configure -> authenticate with aws
+aws s3 ls ->no o/p is okay, but error means credentails are wrong
+
+
+1. create ec2 user
+2. update private ip in R53 record
+3. if frontend update public ip in frontend.daws86s.functions
+
+aws ec2 run-instances --image-id ami-09c813fb71547fc4f --instance-type t3.micro --security-group-ids sg-045b3478cf0d8062e --tag-specifications 'ResourceType=instance,Tags=[{Key=Name,Value=test}]' --query 'Instances[0].InstancesId' --output text
+
+1. Get the instance-id
+2. Query the instance-id
+
+public Ip query
+aws ec2 describe-instances --instance-ids i-05493202d91f9ab56 --query 'Reservations[0].Instances[0].PublicIpAddress' --output text
+
+private ip query
+aws ec2 describe-instances --instance-ids i-05493202d91f9ab56 --query 'Reservations[0].Instances[0].PrivateIpAddress' --output text
+
+11 instances
+I want to create instances dynamically
+
+1. created instance and took instance-id
+2. get private ip or public ip
+
+if instance == "Frontend" take private ip 
+else take public ip
+
+Existing floder to repo
+=======================
+git init -> initialise folder as repo
+
+aws route53 change-resource-record-sets \
+  --hosted-zone-id Z0948150OFPSYTNVYZOY \
+  --change-batch '
+  {
+    "Comment": "Updating record set"
+    ,"Changes": [{
+      "Action"              : "UPSERT"
+      ,"ResourceRecordSet"  : {
+        "Name"              : "'$RECORD_NAME'"
+        ,"Type"             : "A"
+        ,"TTL"              : 1
+        ,"ResourceRecords"  : [{
+            "Value"         : "'$IP'"
+        }]
+      }
+    }]
+  }
+  '
