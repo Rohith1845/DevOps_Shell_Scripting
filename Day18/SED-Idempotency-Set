@@ -1,0 +1,48 @@
+valriables
+Data types
+Conditions
+Exit status
+Functions
+Loops
+Redirections and logs
+Error handling
+
+SED editor
+===========
+strealine editor, non-interactive
+
+create the line
+update the line
+delete the line
+
+it add temporarly in runtime
+sed 'li Hello SED' <filename>
+
+if you want add in the acutal file you use -i
+sed -i '1i hello' <filename> ->insert after first line
+sed 'la hello' ->insert after first line
+sed '2d' -> delete second line
+sed '/hello/d' -> delete lines where hello present
+sed 's/root/Root/' ->subsititute first occurences in every line
+sed 's/sbin/SBIN/g' ->substitute gobally means in all lines
+sed '3c/ change' ->replaces the line
+sed '/error/ c NO-ERROR -> change the line based on pattern
+
+idempotent
+==========
+Scripts should give same results even you run them infinite times is called idempotency
+
+GET -> Idempotent
+POST -> chance of duplicates or error.. we need work for idempotency
+PUT/UPDATE -> not danger, check if already same then dont allow chnage
+DELETE -> not danger, but check if already deleted, then tell it is deleted already
+
+CHECK roboshop user already exist or not, if exit skip otherwise create
+
+mongosh mongodb.rdaws86s.fun --quiet --eval
+"db.getCollectionNames().includes('COLLECTION_NAME')"
+
+
+instead of using validate() function use set to reduce number of lines in script
+
+trap command in shell
